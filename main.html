@@ -18,5 +18,82 @@
             </ul>
         </nav>
     </header>
+
+    <main>
+        <section id="contacto">
+            <h2>Formulario de Contacto</h2>
+            <p>Rellena el formulario para enviarme tus comentarios o preguntas.</p>
+            <!--Todos los elementos que correspondan a un formulario suelen esta encap
+            sulados en la etique form...esto es una buena practica-->
+            <form>
+                <!--Label es una etiqueta descriptiva para asociar un texto escritpivo a un input
+                 El atributo for ayuda a vincularlo con un elmento de formulario
+                 especifico ya que el atributo for contiene el valor de id delc mapo
+                 de entrada con el cual se asocia-->
+                <label for="nombre">Nombre</label>
+                <!--Es un elemento de entrada de tipo 
+                texto algo muy importante es que el label y
+                la entrada input deben tener el mismo id ya que se deben asoc
+                asociar entre ambos-->
+
+                <!--PlaceHolder es una descricion de la pregunta dentro del cuadro de texto-->
+                <!--requiered es una tributo para indicar que esta pregunta es obligaotria-->
+                <input type="text" id="nombre" placeholder="Escribe tu nombre" required>
+
+                <label email="email">Correo electronico</label>
+                <input type="email" id="email" placeholder="ejemplo@correo.com" required>
+
+
+                <label for="asunto">Asunto</label>
+                <!--dar una lista de opciones-->
+                <select id="asunto" required>
+                    <option>Consulta</option>
+                    <option>Sugerencia</option>
+                    <option>Queja</option>
+                    <option>Otro</option>
+                </select>
+
+                <label for="mensaje">Mensaje:</label>
+                <!--rows define las lienas de texto que se pueden visualizar-->
+                <textarea id="mensaje" 
+                            rows="5" 
+                            placeholder="Escribe un mensaje aqui..." 
+                            required>
+                </textarea>
+                <!--fielset nos sirve para agrupar elementos de un ofrmulario relaciones
+                Facilita la compresion y nevegacion en el formulario...especialmente para lo susuarios
+                de lectores dde pantalla-->
+                <fieldset>
+                    <!--legend nos ayuda a proporcionar un titulo a mi grupo de infromacion almacenado el fielset-->
+                    <legend>Género</legend>
+                    <label for="genero-masculino">Masculino</label>
+                    <input type="radio" name="genero" id="genero-masculino">
+                    
+                    <label for="genero-feminino">Femenino</label>
+                    <input type="radio" name="genero" id= "genero-femenino">
+
+                    <label for="genero-otro">Otro</label>
+                    <input type="radio" name="genero" id="genero_otro">
+                </fieldset>
+
+                <fieldset>
+                    <legend>Intereses</legend>
+                    <label for="intereses-cocinar">Cocinar</label>
+                    <input type="checkbox" name="cocinar" id="intereses-cocinar">
+
+                    <label for="inteses-medititar">Meditar</label>
+                    <input type="checkbox" name="meditar" id="intereses-meditar">
+
+                    <label for="inteses-senderiso">Senderismo</label>
+                    <input type="checkbox" name="senderismo" id="intereses-senderismo">
+                </fieldset>
+
+                <!--antes de salir del formulario se agraga el boton para enviar el formulario
+                solamente uno por formulario se puede tener-->
+                
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
 </body>
 </html>
